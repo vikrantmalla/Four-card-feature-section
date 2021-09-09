@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--VeryLightGray);
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /*Primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /*Neutral */
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+header {
+    margin: 3.1rem auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: var(--GrayishBlue);
+    font-weight: 200;
+    margin: 0;
+}
+
+h1 span {
+    color: var(--VeryDarkBlue);
+    font-weight: 600;
+}
+
+p {
+    color: var(--GrayishBlue);
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.box {
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+    border-radius: .3rem;
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+    margin: .9rem;
+    width: 21.8rem;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: .3rem;
+    width: 100%;
+}
+
+.box-red::after {
+    background-color: hsl(0, 78%, 62%);
+}
+
+.box-cyan::after {
+    background-color: hsl(180, 62%, 55%);
+}
+
+.box-orange::after {
+    background-color: hsl(34, 97%, 64%);
+}
+
+.box-blue::after {
+    background-color: hsl(212, 86%, 64%);
+}
+
+.box h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.box p {
+    font-size: 14px;
+    margin: .9rem 0 2.5rem;
+    padding: 0;
+}
+
+.box img {
+    display: block;
+    margin-left: auto;
+}
+
+footer {
+    text-align: center;
+}
+
+.attribution {
+    font-size: .6rem;
+    text-align: center;
+    color: var(--Orange);
+}
+
+.attribution a {
+    color: var(--Cyan);
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    header {
+        max-width: 500px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: .9rem;
+    }
+    .box-push {
+        transform: translateY(50%);
+    }
+}
+
+@media (max-width: 1130px) {
+    .box-push {
+        transform: translateY(0);
+    }
+}
